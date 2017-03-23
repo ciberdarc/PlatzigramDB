@@ -1,0 +1,22 @@
+{
+  "name": "platzigram-db",
+  "version": "1.0.0",
+  "description": "Platzigram Database Client",
+  "main": "index.js",
+  "scripts": {
+    "lint": "standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ciberdarc/PlatzigramDB.git"
+  },
+  "author": "Alexis Araujo <ala1289@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ciberdarc/PlatzigramDB/issues"
+  },
+  "homepage": "https://github.com/ciberdarc/PlatzigramDB#readme",
+  "devDependencies": {
+    "standard": "^9.0.2"
+  }
+}
