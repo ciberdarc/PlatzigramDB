@@ -4,7 +4,11 @@
   "description": "Platzigram Database Client",
   "main": "index.js",
   "scripts": {
-    "lint": "standard"
+    "lint": "standard",
+    "test": "npm run lint && ava"
+  },
+  "standard": {
+    "parser": "babel-eslint"
   },
   "repository": {
     "type": "git",
@@ -17,6 +21,9 @@
   },
   "homepage": "https://github.com/ciberdarc/PlatzigramDB#readme",
   "devDependencies": {
+    "ava": "^0.18.2",
+    "babel-eslint": "^7.2.1",
+    "babel-preset-es2015": "^6.24.0",
     "standard": "^9.0.2"
   }
 }

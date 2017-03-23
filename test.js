@@ -1,1 +1,2 @@
-var a
+var a = 'hola mundo'
+console.log(a)
