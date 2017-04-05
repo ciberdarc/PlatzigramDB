@@ -7,6 +7,7 @@ const r = require('rethinkdb')
 
 const dbName = `platzigram_${uuid.v4()}`
 const db = new Db({ db: dbName })
+const fixtures = require('./fixtures')
 
 test.before('setup database', async t => {
   await db.connect()
@@ -26,13 +27,7 @@ test.after.always('cleanup database', async t => {
 test('save image', async t => {
   t.is(typeof db.saveImage, 'function', 'saveImage is function')
 
-  let image = {
-    description: 'an #awesome picture with #tags #platzi',
-    url: `https://platzigram.test/${uuid.v4()}.jpg`,
-    likes: 0,
-    liked: false,
-    user_id: uuid.uuid()
-  }
+  let image = fixtures.getImage()
 
   let created = await db.saveImage(image)
   t.is(created.description, image.description)
@@ -44,4 +39,16 @@ test('save image', async t => {
   t.is(typeof created.id, 'string')
   t.is(created.public_id, uuid.encode(created.id))
   t.truthy(created.createdAt)
+})
+
+test('like image', async t => {
+  t.is(typeof db.saveImage, 'function', 'likeImage is function')
+
+  let image = fixtures.getImage()
+
+  let created = await db.saveImage(image)
+  let result = await db.likeImage(created.public_id)
+
+  t.true(result.liked)
+  t.is(result.likes, image.likes + 1)
 })
