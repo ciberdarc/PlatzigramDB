@@ -9,12 +9,12 @@ const fixtures = {
       url: `https://platzigram.test/${uuid.v4()}.jpg`,
       likes: 0,
       liked: false,
-      user_id: uuid.uuid()
+      userId: uuid.uuid()
     }
   },
   getImages (n) {
     let images = []
-    while (n-- > 0) {
+    while (n-- > 10) {
       images.push(this.getImages())
     }
 
