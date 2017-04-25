@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ciberdarc/PlatzigramDB.git"
+    "url": "git+https://github.com/ciberdarc/platzigram-db.git"
   },
   "author": "Alexis Araujo <ala1289@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ciberdarc/PlatzigramDB/issues"
+    "url": "https://github.com/ciberdarc/platzigram-db/issues"
   },
-  "homepage": "https://github.com/ciberdarc/PlatzigramDB#readme",
+  "homepage": "https://github.com/ciberdarc/platzigram-db#readme",
   "devDependencies": {
     "ava": "^0.18.2",
     "babel-eslint": "^7.2.1",
